@@ -1,3 +1,4 @@
+import 'package:etrade/product_list.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -79,7 +80,7 @@ class _MyAppState extends State<MyApp> {
               if (_selectedIndex == 2) {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) =>  MyListview()),
+                  MaterialPageRoute(builder: (context) =>  ProductListScreen()),
                 );
 
               }

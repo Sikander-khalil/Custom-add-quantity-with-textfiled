@@ -18,14 +18,14 @@ class DatabaseHelper {
 
   initDatabase()async{
     io.Directory documentDirectory = await getApplicationDocumentsDirectory() ;
-    String path = join(documentDirectory.path , 'cart.db');
+    String path = join(documentDirectory.path , 'eTrade.db');
     var db = await openDatabase(path , version: 1 , onCreate: _onCreate,);
     return db ;
   }
 
   _onCreate (Database db , int version )async{
     await db.execute('''
-        CREATE TABLE tableName(ItemId NVARCHAR(30),
+        CREATE TABLE Item(ItemId NVARCHAR(30),
         ItemName NVARCHAR(70), ItemUrduName NVARCHAR(70), TradePrice FLOAT)
         
         '''
